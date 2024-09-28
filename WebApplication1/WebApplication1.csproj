@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -9,7 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="RemovedFiles\**" />
+    <Content Remove="RemovedFiles\**" />
+    <EmbeddedResource Remove="RemovedFiles\**" />
+    <None Remove="RemovedFiles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.3.3" />
+    <PackageReference Include="leaflet" Version="0.7.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.20.1" />
   </ItemGroup>
 
